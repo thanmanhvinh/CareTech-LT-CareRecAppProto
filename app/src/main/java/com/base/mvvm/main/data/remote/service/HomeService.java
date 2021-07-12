@@ -11,15 +11,19 @@ import com.base.mvvm.main.data.remote.response.HomeResponse;
 
 import io.reactivex.Single;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 /**
  * PropertySaleService
  */
 public interface HomeService {
 
-  /**
-   * API get test info
-   */
-  @GET("/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0")
-  Single<HomeResponse> getDataTest();
-  }
+    /**
+     * API get test info
+     */
+    @GET("/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0")
+    Single<HomeResponse> getDataTest();
+
+}
+
+

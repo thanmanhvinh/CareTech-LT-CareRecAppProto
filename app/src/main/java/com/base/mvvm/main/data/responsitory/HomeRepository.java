@@ -24,6 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 public class HomeRepository {
 
   private HomeService service;
+  private Context context;
 
   @Inject
   public HomeRepository(HomeService service) {

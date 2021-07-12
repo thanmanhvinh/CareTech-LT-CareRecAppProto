@@ -1,6 +1,7 @@
 package com.base.mvvm.main.view.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.base.mvvm.R;
+import com.base.mvvm.common.utils.LogUtils;
+import com.base.mvvm.common.utils.ToastUtils;
 import com.base.mvvm.common.view.base.BottomTabsFragment;
 import com.base.mvvm.databinding.FragmentDiaryBinding;
 import com.base.mvvm.main.viewmodel.DiaryViewModel;
@@ -60,6 +63,7 @@ public class DiaryFragment extends BottomTabsFragment<DiaryViewModel, FragmentDi
     }
 
     private void observeViewModel(DiaryViewModel viewModel) {
+        Log.d("123123", "title");
 
         viewModel.getIsNetWork().observe(this, flag -> {
             if (!flag) {

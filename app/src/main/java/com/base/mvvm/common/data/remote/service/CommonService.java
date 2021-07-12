@@ -25,4 +25,5 @@ public interface CommonService {
   @GET("/event/list-category")
   Single<ConfirmResponse> getCategories(@Header("Authorization") String token);
 
+
 }
