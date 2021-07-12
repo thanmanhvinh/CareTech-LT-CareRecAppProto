@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BottomTabView">
+        <attr name="icon_drawable" format="reference" />
+        <attr name="tab_name" format="string|reference" />
+        <attr name="tab_text_color" format="color|reference" />
+    </declare-styleable>
+
+    <dimen name="bottom_bar_tab_height">50dp</dimen>
+    <dimen name="text_size_number_notification">10sp</dimen>
+    <dimen name="size_icon_navigation">35dp</dimen>
+    <dimen name="padding_icon_navigation">6dp</dimen>
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:ignore="contentDescription">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_radius_dialog"
+    android:padding="@dimen/element_spacing_large">
+
+
+    <TextView
+      android:id="@+id/txtTitle"
+      style="@style/TextViewTitle"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="@dimen/element_spacing_normal"
+      android:layout_marginBottom="@dimen/element_spacing_x_normal"
+      android:text="@string/title_loading" />
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@+id/txtTitle"
+      android:background="@color/bg_line" />
+
+    <TextView
+      android:id="@+id/txtContent"
+      style="@style/TextViewPrimary"
+      android:layout_below="@+id/txtTitle"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="@dimen/element_spacing_large"
+      android:text="@string/content_loading" />
+
+    <ProgressBar
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_below="@id/txtContent"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="@dimen/element_spacing_xlarge"
+      android:layout_marginBottom="@dimen/element_spacing_xlarge"
+      android:indeterminate="true"
+      android:indeterminateTint="@color/progress_icon"
+      android:indeterminateTintMode="src_atop" />
+
+
+  </RelativeLayout>
+</layout>

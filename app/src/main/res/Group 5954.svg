@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="36" viewBox="0 0 168 36">
+  <g id="Group_5954" data-name="Group 5954" transform="translate(-245 -41)">
+    <g id="Group_2587" data-name="Group 2587" transform="translate(245 41)">
+      <g id="Group_2583" data-name="Group 2583">
+        <path id="Path_93644" data-name="Path 93644" d="M18,0H150a18,18,0,0,1,0,36H18A18,18,0,0,1,18,0Z" fill="#454d58"/>
+        <text id="介護業務" transform="translate(44 26)" fill="#fff" font-size="20" font-family="YuGothicUI-Bold, Yu Gothic UI" font-weight="700"><tspan x="0" y="0">介護業務</tspan></text>
+      </g>
+      <g id="Group_2584" data-name="Group 2584" transform="translate(25 14.222) rotate(90)">
+        <g id="Group_2534" data-name="Group 2534">
+          <line id="Line_240" data-name="Line 240" x2="12" transform="translate(10.392 6) rotate(150)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+          <line id="Line_241" data-name="Line 241" x2="12" transform="translate(10.392 6) rotate(-150)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

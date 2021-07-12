@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".main.view.fragment.LoginFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_top_title_login"
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_marginTop="@dimen/margin_top_edittext_id_login"
+        android:layout_width="@dimen/width_edittext_login"
+        android:layout_height="@dimen/height_edittext_login"/>
+    <EditText
+        android:layout_marginTop="@dimen/margin_top_edittext_password_login"
+        android:layout_width="@dimen/width_edittext_login"
+        android:layout_height="@dimen/height_edittext_login"/>
+    <TextView
+        android:text="forgot pass"
+        android:layout_marginTop="@dimen/margin_top_forgot_password_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginTop="@dimen/margin_top_button_login"
+        android:layout_width="@dimen/width_button_login"
+        android:layout_height="@dimen/height_button_login"/>
+
+</LinearLayout>

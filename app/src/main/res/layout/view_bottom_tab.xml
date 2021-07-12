@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tabIcon"
+                android:layout_width="@dimen/twenty_eight_dp"
+                android:layout_height="@dimen/twenty_eight_dp"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/padding_icon_navigation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/badgeNotification"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="right|end|top"
+                android:layout_marginTop="@dimen/element_spacing_small"
+                android:background="@drawable/bg_badget"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_number_notification"
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tabTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="@dimen/seven_dp"
+                android:textSize="@dimen/text_size_xx_small" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</merge>

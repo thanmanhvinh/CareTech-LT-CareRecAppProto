@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">BASE MVVM</string>
+    <string name="title_activity_main">BASE MVVM</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!--    commons -->
+    <string name="networkError">Error Network</string>
+    <string name="error_system">Error System</string>　
+    <string name="need_necessary_permissions">Necessary permissions acquired</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Hủy</string>
+    <string name="title_loading">Loading.</string>
+    <string name="content_loading">Loading...</string>　　
+    <!--menu-->
+    <string name="menu_home">Home</string>
+    <string name="menu_events">Event</string>
+    <string name="menu_create_event">CreateEvent</string>
+    <string name="menu_calendar">Calendar</string>
+    <string name="menu_mypage">Info</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--Care Tech-->
+    <string name="note">実施記録</string>
+    <string name="diary">介護日誌</string>
+    <string name="history">実施履歴</string>
+    <string name="report">報告書</string>
+    <string name="list_user">利用者一覧</string>
+
+</resources>
