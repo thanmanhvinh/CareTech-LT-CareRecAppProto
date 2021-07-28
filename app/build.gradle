@@ -1,0 +1,179 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.base.mvvm.caretech"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+
+        dataBinding true
+
+        // for view binding:
+        // viewBinding true
+    }
+    android.variantFilter { variant ->
+        if (variant.buildType.name.endsWith('release') || variant.buildType.name.endsWith('debug')) {
+            variant.setIgnore(true)
+        }
+    }
+    signingConfigs {
+
+        product {
+            try {
+                storeFile file("../key-release/Ping_Pro.jks")
+                storePassword KEYSTORE_PASSWORD
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+
+            }
+            catch (ex) {
+                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+            }
+        }
+
+        staging {
+            try {
+                storeFile file("../key-release/Ping_Pro.jks")
+                storePassword KEYSTORE_PASSWORD
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+            }
+            catch (ex) {
+                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+            }
+        }
+
+    }
+
+
+    buildTypes {
+
+        product {
+            buildConfigField "String", "BASE_URL", '"https://www.7timer.info/"'
+            debuggable false
+            signingConfig signingConfigs.product
+        }
+        staging {
+            buildConfigField "String", "BASE_URL", '"https://www.7timer.info/"'
+            debuggable false
+            signingConfig signingConfigs.staging
+        }
+
+        develop {
+            //buildConfigField "String", "BASE_URL", '"https://www.7timer.info/"'
+            //buildConfigField "String", "BASE_URL", '"https://jsonplaceholder.typicode.com/"'
+            buildConfigField "String", "BASE_URL", '"https://api.themoviedb.org/3/movie/"'
+            debuggable true
+            signingConfig signingConfigs.debug
+        }
+
+    }
+}
+
+dependencies {
+
+    final ANDROIDX_VERSION = "1.1.0"
+    final ANDROIDX_MATERIAL_VERSION = "1.1.0"
+    final ANDROIDX_CONSTRAINT_VERSION = "1.1.0"
+    final ANDROIDX_NAV_FRAG = "2.2.2"
+    final LEGACY_VERSION = "1.0.0"
+    // default
+    implementation "androidx.appcompat:appcompat:$ANDROIDX_VERSION"
+    implementation "com.google.android.material:material:$ANDROIDX_MATERIAL_VERSION"
+    implementation "androidx.constraintlayout:constraintlayout:$ANDROIDX_CONSTRAINT_VERSION"
+    implementation "androidx.recyclerview:recyclerview:$ANDROIDX_MATERIAL_VERSION"
+    implementation "androidx.navigation:navigation-fragment:$ANDROIDX_NAV_FRAG"
+    implementation "androidx.navigation:navigation-ui:$ANDROIDX_NAV_FRAG"
+    //implementation "androidx.navigation:navigation-dynamic-features-fragment:$ANDROIDX_NAV_FRAG"
+    testImplementation "junit:junit:4.+"
+    implementation "androidx.legacy:legacy-support-v4:$LEGACY_VERSION"
+
+    // Android Architecture Components
+    final ANDROIDX_LIFECYCLE_VERSION = "2.1.0"
+    // Android Architecture Components
+    implementation "androidx.lifecycle:lifecycle-extensions:$ANDROIDX_LIFECYCLE_VERSION"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$ANDROIDX_LIFECYCLE_VERSION"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$ANDROIDX_LIFECYCLE_VERSION"
+
+    implementation "android.arch.lifecycle:extensions:1.0.0"
+
+    // Retrofit
+
+    final RETROFIT_VERSION = '2.3.0'
+    final RETROFIT_GSON_VERSION = '2.9.0'
+    final RETROFIT_HTTP_VERSION = '3.14.1'
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT_GSON_VERSION"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$RETROFIT_HTTP_VERSION"
+    implementation "com.squareup.okhttp3:logging-interceptor:$RETROFIT_HTTP_VERSION"
+    implementation "com.squareup.okhttp3:mockwebserver:$RETROFIT_HTTP_VERSION"
+
+    // RxJava / RxAndroid
+    final RX_JAVA_VERSION = "2.2.9"
+    final RX_ANDROID_VERSION = "2.1.1"
+    final RX_RELAY_VERSION = "2.1.0"
+
+    implementation "io.reactivex.rxjava2:rxjava:$RX_JAVA_VERSION"
+    implementation "io.reactivex.rxjava2:rxandroid:$RX_ANDROID_VERSION"
+    implementation "com.jakewharton.rxrelay2:rxrelay:$RX_RELAY_VERSION"
+
+    // Dagger 2
+    final DAGGER_VERSION = '2.21'
+    implementation "com.google.dagger:dagger:$DAGGER_VERSION"
+    implementation "com.google.dagger:dagger-android-support:$DAGGER_VERSION"
+    annotationProcessor "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$DAGGER_VERSION"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+
+    // Room SQLite for data persistence
+    final ROOM_DB_VERSION = "2.2.1"
+    implementation "androidx.room:room-runtime:$ROOM_DB_VERSION"
+    annotationProcessor "androidx.room:room-compiler:$ROOM_DB_VERSION"
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:$ROOM_DB_VERSION"
+
+    final GLIDE_VERSION = "4.12.0"
+    implementation "com.github.bumptech.glide:glide:$GLIDE_VERSION"
+    annotationProcessor "com.github.bumptech.glide:compiler:$GLIDE_VERSION"
+
+    // Timber
+    final TIMBER_VERSION = "4.7.1"
+    implementation "com.jakewharton.timber:timber:$TIMBER_VERSION"
+
+    //Frag Nav
+    final FRAG_NAV = "2.4.0"
+    implementation "com.ncapdevi:frag-nav:$FRAG_NAV"
+
+    //IcePick
+    final ICE_PICK = "3.2.0"
+    implementation "frankiesardo:icepick:$ICE_PICK"
+    annotationProcessor "frankiesardo:icepick-processor:$ICE_PICK"
+
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3C9CCF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FBC10B</color>
+<!--    commont-->
+    <color name="progress_icon">#18488e</color>>
+    <color name="bg_line">#E5E5E5</color>
+    <color name="bg_bar_main">#383858</color>
+    <color name="color_background_bottom_bar">@android:color/transparent</color>
+    <color name="tab_select">#FDC159</color>
+    <color name="badge">#E10000</color>
+    <color name="calendar_recycle_view_color">#373857</color>
+
+
+
+
+    <!--Care Tech-->
+    <color name="color_button_login_disable">#F7C4A9</color>
+    <color name="color_button_login_enable">#FF9964</color>
+    <color name="color_backgroud_edittext_login">#454D58</color>
+    <color name="color_hint_edittext_login">#6A7179</color>
+    <color name="color_edittext_login">#454D58</color>
+    <color name="color_backgroud_buttom_bar">#FF9964</color>
+    <color name="color_backgroud_text_left_toolbar">#707070</color>
+    <color name="color_backgroud_homer">#F0F0F0</color>
+    <color name="color_backgroud_button_two">#FFAE57</color>
+    <color name="color_backgroud_button_three">#FFC44A</color>
+    <color name="color_backgroud_button_four">#FFDA3E</color>
+
+
+
+
+</resources>
