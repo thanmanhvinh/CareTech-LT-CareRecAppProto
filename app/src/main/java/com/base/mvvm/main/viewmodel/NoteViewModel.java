@@ -16,11 +16,10 @@ import com.base.mvvm.common.data.remote.response.BaseResponse;
 import com.base.mvvm.common.utils.SingleLiveEvent;
 import com.base.mvvm.common.utils.Utils;
 import com.base.mvvm.common.viewmodel.BaseViewModel;
+import com.base.mvvm.main.data.remote.model.movies.Movie;
 import com.base.mvvm.main.data.remote.response.HomeResponse;
 import com.base.mvvm.main.data.responsitory.HomeRepository;
-
 import javax.inject.Inject;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 
 /**
@@ -59,6 +58,28 @@ public class NoteViewModel extends BaseViewModel {
                     }
                 }
                 ));
+        return data;
+    }
+
+    public MutableLiveData<Movie> getListMovie(Context context, String api_key) {
+        hideKeyBoard();
+        MutableLiveData<Movie> data = new MutableLiveData<>();
+        if (!Utils.isNetWork(context)) {
+            this.isNetWork.postValue(false);
+            return data;
+        }
+        setIsLoading(true);
+        compositeDisposable.add(
+                mRepository.getListMovie(context, api_key)
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(data::postValue, throwable -> {
+                                    BaseResponse response = Utils.parserError(throwable, context);
+                                    if (response != null) {
+                                        errorMessage = response.getErrorMessage();
+                                        validateError.postValue(true);
+                                    }
+                                }
+                        ));
         return data;
     }
 

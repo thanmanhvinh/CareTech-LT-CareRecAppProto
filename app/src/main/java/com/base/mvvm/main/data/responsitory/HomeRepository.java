@@ -10,8 +10,13 @@ package com.base.mvvm.main.data.responsitory;
 import android.content.Context;
 
 import com.base.mvvm.common.utils.exception.network.RxNetwork;
+import com.base.mvvm.main.data.remote.model.movies.Movie;
+import com.base.mvvm.main.data.remote.model.movies.MovieResponse;
 import com.base.mvvm.main.data.remote.response.HomeResponse;
+import com.base.mvvm.main.data.remote.response.Posts;
 import com.base.mvvm.main.data.remote.service.HomeService;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -40,6 +45,18 @@ public class HomeRepository {
     return RxNetwork.checkNetwork(context)
         .flatMap(connected -> service.getDataTest())
         .subscribeOn(Schedulers.io());
+  }
+
+  public Single<List<Posts>> getPost(Context context) {
+    return RxNetwork.checkNetwork(context)
+            .flatMap(connected -> service.getPosts())
+            .subscribeOn(Schedulers.io());
+  }
+
+  public Single<Movie> getListMovie(Context context, String api_key) {
+    return RxNetwork.checkNetwork(context)
+            .flatMap(connected -> service.getListMovie(api_key))
+            .subscribeOn(Schedulers.io());
   }
 
 }

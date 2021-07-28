@@ -7,6 +7,7 @@
 
 package com.base.mvvm.common.di.module;
 
+import com.base.mvvm.main.view.fragment.demo.DetailFragment;
 import com.base.mvvm.main.view.fragment.DiaryFragment;
 import com.base.mvvm.main.view.fragment.ListUserFragment;
 import com.base.mvvm.main.view.fragment.HistoryFragment;
@@ -54,5 +55,10 @@ public class FragmentModule {
         return ListUserFragment.newsInstance();
     }
 
+    @Provides
+    @Singleton
+    DetailFragment provideDetailFragment() {
+        return DetailFragment.newsInstance();
+    }
 
 }

@@ -5,19 +5,27 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
+import androidx.recyclerview.widget.LinearLayoutManager;
 import com.base.mvvm.R;
 import com.base.mvvm.common.utils.LogUtils;
-import com.base.mvvm.common.utils.ToastUtils;
 import com.base.mvvm.common.view.base.BottomTabsFragment;
 import com.base.mvvm.databinding.FragmentDiaryBinding;
+import com.base.mvvm.main.data.remote.response.Posts;
+import com.base.mvvm.main.view.fragment.adapter.ListPostAdapter;
+import com.base.mvvm.main.view.fragment.adapter.MovieAdapter;
 import com.base.mvvm.main.viewmodel.DiaryViewModel;
 
-public class DiaryFragment extends BottomTabsFragment<DiaryViewModel, FragmentDiaryBinding> {
+import java.util.ArrayList;
+import java.util.List;
+
+public class DiaryFragment extends BottomTabsFragment<DiaryViewModel, FragmentDiaryBinding> implements ListPostAdapter.SetOnClickItem, MovieAdapter.SetOnClickItem{
     public static final String TAG = NoteFragment.class.getSimpleName();
+
+    private List<Posts> mList;
+    private ListPostAdapter mListPostAdapter;
 
     public static DiaryFragment newsInstance() {
         Bundle args = new Bundle();
@@ -63,15 +71,12 @@ public class DiaryFragment extends BottomTabsFragment<DiaryViewModel, FragmentDi
     }
 
     private void observeViewModel(DiaryViewModel viewModel) {
-        Log.d("123123", "title");
-
         viewModel.getIsNetWork().observe(this, flag -> {
             if (!flag) {
                 progressDialog.dismiss();
 
             }
         });
-
 
         viewModel.getIsBackFragment().observe(this, flag -> {
             if (flag) {
@@ -84,7 +89,7 @@ public class DiaryFragment extends BottomTabsFragment<DiaryViewModel, FragmentDi
                 progressDialog.dismiss();
                 viewModel.getValidateError().postValue(false);
                 errorDialog.setMessage(viewModel.getErrorMessage());
-                errorDialog.show();
+                //errorDialog.show();
 
             }
         });
@@ -101,6 +106,31 @@ public class DiaryFragment extends BottomTabsFragment<DiaryViewModel, FragmentDi
 
         });
 
+        //
+        viewModel.getListPosts(getContext(), 3, "sort", "desc").observe(this, response -> {
+            viewModel.setIsLoading(false);
+            if(response != null) {
+                LogUtils.d("Home " + response.get(1).getTitle());
+                Log.d("123123", "titles: "+response.get(1).getTitle() + "\n " + "body "+response.get(1).getBody());
+                //ToastUtils.showToast(getContext(), "Data test " + homeResponse.getProduct());
 
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+                dataBinding.rcyListPosts.setLayoutManager(linearLayoutManager);
+                mList = new ArrayList<>();
+                mListPostAdapter = new ListPostAdapter(mList, this);
+                mListPostAdapter.updateList(response);
+                dataBinding.rcyListPosts.setAdapter(mListPostAdapter);
+
+            }else {
+                errorDialog.show();
+            }
+        });
+
+
+    }
+
+    @Override
+    public void OnclickItem(int position) {
+        Toast.makeText(getContext(), "click "+ position, Toast.LENGTH_SHORT).show();
     }
 }

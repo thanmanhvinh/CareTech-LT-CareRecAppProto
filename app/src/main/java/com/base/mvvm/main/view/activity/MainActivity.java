@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.base.mvvm.main.view.fragment.demo.DetailFragment;
 import com.base.mvvm.main.view.fragment.DiaryFragment;
 import com.base.mvvm.main.view.fragment.ListUserFragment;
 import com.base.mvvm.main.view.fragment.HistoryFragment;
@@ -25,12 +26,11 @@ public class MainActivity extends BottomTabsActivity<ActivityMainViewModel, Acti
     public static final String TAG = MainActivity.class.getSimpleName();
     //fragment inscreen
     private DiaryFragment secondFragment;
-
     private NoteFragment firstFragment;
     private HistoryFragment thirdFragment;
     private ReportFragment fourthFragment;
     private ListUserFragment fifthFragment;
-
+    private DetailFragment detailFragment;
 
     @Override
     protected Class<ActivityMainViewModel> getViewModel() {
@@ -65,6 +65,7 @@ public class MainActivity extends BottomTabsActivity<ActivityMainViewModel, Acti
         thirdFragment = thirdFragment != null ? (HistoryFragment) fragmentManager.findFragmentByTag(HistoryFragment.TAG) : HistoryFragment.newsInstance();
         fourthFragment = fourthFragment != null ? (ReportFragment) fragmentManager.findFragmentByTag(ReportFragment.TAG) : ReportFragment.newsInstance();
         fifthFragment = fifthFragment != null ? (ListUserFragment) fragmentManager.findFragmentByTag(ListUserFragment.TAG) : ListUserFragment.newsInstance();
+        detailFragment = detailFragment != null ? (DetailFragment) fragmentManager.findFragmentByTag(DetailFragment.TAG) : DetailFragment.newsInstance();
     }
 
     /**

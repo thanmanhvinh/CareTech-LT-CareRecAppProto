@@ -12,6 +12,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.base.mvvm.common.utils.ViewModelFactory;
 import com.base.mvvm.main.viewmodel.ActivityMainViewModel;
+import com.base.mvvm.main.viewmodel.ActivityWebViewViewModel;
+import com.base.mvvm.main.viewmodel.demo.DetailViewModel;
 import com.base.mvvm.main.viewmodel.DiaryViewModel;
 import com.base.mvvm.main.viewmodel.ListUserViewModel;
 import com.base.mvvm.main.viewmodel.HistoryViewModel;
@@ -40,6 +42,11 @@ public abstract class ViewModelModule {
 
     @Binds
     @IntoMap
+    @ViewModelKey(ActivityWebViewViewModel.class)
+    abstract ViewModel bindsWebViewViewModel(ActivityWebViewViewModel activityWebViewViewModel);
+
+    @Binds
+    @IntoMap
     @ViewModelKey(NoteViewModel.class)
     abstract ViewModel bindsFirstFragViewModel(NoteViewModel viewModel);
 
@@ -62,4 +69,11 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(ListUserViewModel.class)
     abstract ViewModel bindFifthFragViewModel(ListUserViewModel viewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(DetailViewModel.class)
+    abstract ViewModel bindDetailFragViewModel(DetailViewModel viewModel);
+
+
 }

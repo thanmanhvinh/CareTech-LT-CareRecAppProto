@@ -7,6 +7,7 @@
 
 package com.base.mvvm.common.di.builder;
 
+import com.base.mvvm.main.view.fragment.demo.DetailFragment;
 import com.base.mvvm.main.view.fragment.ListUserFragment;
 import com.base.mvvm.main.view.fragment.HistoryFragment;
 import com.base.mvvm.main.view.fragment.NoteFragment;
@@ -36,5 +37,8 @@ public abstract class FragmentBuilderModule {
 
     @ContributesAndroidInjector
     abstract ListUserFragment fifthFragment();
+
+    @ContributesAndroidInjector
+    abstract DetailFragment detailFragment();
 
 }

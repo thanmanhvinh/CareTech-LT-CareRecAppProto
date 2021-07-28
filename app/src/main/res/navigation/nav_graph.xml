@@ -9,20 +9,27 @@
         android:id="@+id/FirstFragment"
         android:name="com.base.mvvm.main.view.fragment.NoteFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_note">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_note"/>
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.base.mvvm.main.view.fragment.DiaryFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_diary">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_diary"/>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.base.mvvm.main.view.fragment.HistoryFragment"
+        android:label="HistoryFragment" />
+    <fragment
+        android:id="@+id/listUserFragment"
+        android:name="com.base.mvvm.main.view.fragment.ListUserFragment"
+        android:label="ListUserFragment" />
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.base.mvvm.main.view.fragment.ReportFragment"
+        android:label="ReportFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.base.mvvm.main.view.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>

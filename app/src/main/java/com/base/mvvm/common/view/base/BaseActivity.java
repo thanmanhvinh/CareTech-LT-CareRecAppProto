@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.base.mvvm.common.data.local.SharedPrefsHelper;
 import com.base.mvvm.common.utils.LogUtils;
@@ -65,6 +66,15 @@ public abstract class BaseActivity<D extends ViewDataBinding> extends AppCompatA
       compositeDisposable.clear();
     }
     super.onDestroy();
+  }
+
+  @Override
+  public void onBackPressed() {
+    if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+      getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }else {
+      super.onBackPressed();
+    }
   }
 
   @Override

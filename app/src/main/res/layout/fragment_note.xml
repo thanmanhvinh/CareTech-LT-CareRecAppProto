@@ -16,249 +16,35 @@
         android:layout_marginRight="@dimen/twenty_dp"
         android:weightSum="5.1">
 
-        <androidx.core.widget.NestedScrollView
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/backgroud_layout_one"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/backgroud_layout_one"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/backgroud_text_layout_two"
-                    android:gravity="center"
-                    android:text="排泄"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="実施記録"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/view3" />
-
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/backgroud_text_layout_three"
-                    android:gravity="center"
-                    android:text="口腔ケア"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/view4" />
-
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/backgroud_text_layout_three"
-                    android:gravity="center"
-                    android:text="褥瘡ケア"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/backgroud_text_layout_one"
-                    android:gravity="center"
-                    android:text="水分"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/backgroud_text_layout_two"
-                    android:gravity="center"
-                    android:text="入浴"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view3" />
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/backgroud_text_layout_three"
-                    android:gravity="center"
-                    android:text="バイタル"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view4" />
-
-                <TextView
-                    android:id="@+id/textView23"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="@drawable/backgroud_text_layout_four"
-                    android:gravity="center"
-                    android:text="身体計測"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintHorizontal_bias="0.437"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view5" />
-
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/backgroud_text_layout_three"
-                    android:gravity="center"
-                    android:text="栄養ケア"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/backgroud_text_layout_two"
-                    android:gravity="center"
-                    android:text="レクリエーション"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-                <View
-                    android:id="@+id/view3"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/color_backgroud_text_left_toolbar"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7"
-                    tools:layout_editor_absoluteX="-2dp" />
-
-                <View
-                    android:id="@+id/view4"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/color_backgroud_text_left_toolbar"
-                    app:layout_constraintTop_toBottomOf="@+id/textView12"
-                    tools:layout_editor_absoluteX="-1dp" />
-
-                <View
-                    android:id="@+id/view5"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/color_backgroud_text_left_toolbar"
-                    app:layout_constraintTop_toBottomOf="@+id/textView19"
-                    tools:layout_editor_absoluteX="16dp" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/backgroud_text_layout_one"
-                    android:gravity="center"
-                    android:text="間食"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/view" />
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/backgroud_text_layout_one"
-                    android:gravity="center"
-                    android:text="夕食"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/backgroud_text_layout_one"
-                    android:gravity="center"
-                    android:text="昼食"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
@@ -314,19 +100,6 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="実施記録"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <View
                     android:id="@+id/view"
                     android:layout_width="match_parent"
@@ -336,50 +109,297 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout"
                     tools:layout_editor_absoluteX="-34dp" />
 
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_begin="0dp"
-                    app:layout_constraintGuide_percent="0.5" />
+            </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/backgroud_text_layout_one"
-                    android:gravity="center"
-                    android:text="朝食"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view" />
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="0dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/backgroud_text_layout_two"
-                    android:gravity="center"
-                    android:text="日常"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
 
-        </androidx.core.widget.NestedScrollView>
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/backgroud_text_layout_two"
+                        android:gravity="center"
+                        android:text="排泄"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/backgroud_text_layout_three"
+                        android:gravity="center"
+                        android:text="口腔ケア"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/backgroud_text_layout_three"
+                        android:gravity="center"
+                        android:text="褥瘡ケア"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/backgroud_text_layout_one"
+                        android:gravity="center"
+                        android:text="水分"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/backgroud_text_layout_two"
+                        android:gravity="center"
+                        android:text="入浴"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/backgroud_text_layout_three"
+                        android:gravity="center"
+                        android:text="バイタル"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/backgroud_text_layout_four"
+                        android:gravity="center"
+                        android:text="身体計測"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintHorizontal_bias="0.437"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/backgroud_text_layout_three"
+                        android:gravity="center"
+                        android:text="栄養ケア"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/backgroud_text_layout_two"
+                        android:gravity="center"
+                        android:text="レクリエーション"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/color_backgroud_text_left_toolbar"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7"
+                        tools:layout_editor_absoluteX="-2dp" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/color_backgroud_text_left_toolbar"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12"
+                        tools:layout_editor_absoluteX="-1dp" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/color_backgroud_text_left_toolbar"
+                        app:layout_constraintTop_toBottomOf="@+id/textView19"
+                        tools:layout_editor_absoluteX="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/backgroud_text_layout_one"
+                        android:gravity="center"
+                        android:text="間食"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/backgroud_text_layout_one"
+                        android:gravity="center"
+                        android:text="夕食"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/backgroud_text_layout_one"
+                        android:gravity="center"
+                        android:text="昼食"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="0dp"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/backgroud_text_layout_one"
+                        android:gravity="center"
+                        android:text="朝食"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/backgroud_text_layout_two"
+                        android:gravity="center"
+                        android:text="日常"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
 
         <View
             android:layout_width="0dp"
@@ -387,79 +407,110 @@
             android:layout_weight="0.1" />
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:background="@drawable/backgroud_layout_one"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:layout_weight="3">
 
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:text="今日"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:text="申し送り"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" 全５件"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView10" />
-
-            <View
-                android:id="@+id/view2"
+            <!--<androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/color_backgroud_text_left_toolbar"
-                app:layout_constraintTop_toBottomOf="@+id/textView10"
-                tools:layout_editor_absoluteX="95dp" />
+                android:layout_height="match_parent">-->
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="@dimen/fifty"
-                android:layout_height="@dimen/fifty"
-                android:layout_marginBottom="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/icon_add_note" />
-
-            <androidx.recyclerview.widget.RecyclerView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
+                android:layout_height="match_parent"
+                android:background="@drawable/backgroud_layout_one"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="今日"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="申し送り"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 全５件"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_backgroud_text_left_toolbar"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    tools:layout_editor_absoluteX="95dp" />
+
+                <!--<androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcy_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view2" />-->
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="@dimen/fifty"
+                    android:layout_marginBottom="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/icon_add_note" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:fillViewport="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcy_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--</androidx.core.widget.NestedScrollView>-->
+        </LinearLayout>
 
     </LinearLayout>
 

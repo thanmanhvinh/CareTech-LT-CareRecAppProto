@@ -95,10 +95,10 @@ public abstract class BottomTabsActivity<V extends ViewModel, D extends ViewData
       return;
     }
     if (navController.isRootFragment()) {
-      if (!handleBackPress()) {
+      //if (!handleBackPress()) { //on a null object reference
         super.onBackPressed();
         return;
-      }
+      //}
     }
     navController.popFragment();
   }

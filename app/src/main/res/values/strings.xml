@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">BASE MVVM</string>
-    <string name="title_activity_main">BASE MVVM</string>
+    <string name="title_activity_main">Care Tech</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">NoteFragment</string>
+    <string name="second_fragment_label">Diary Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
